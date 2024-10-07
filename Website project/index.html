@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jayam Real Estate</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="client-lotus-logo.png" alt="HPK Star Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+                We specialize in connecting clients with the perfect property solutions. 
+                Whether you're looking for residential homes, expansive residential land, 
+                commercial spaces, or farm land, we offer tailored guidance to meet your needs. 
+                Our expert team ensures a smooth experience, helping you secure the ideal 
+                property for living, investing, or growing your lifestyle.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="The Best Renters Insurance in California of 2023.jpeg" alt="About Us Image" />
+        </div>
+    </section>
+    
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+        
+            <div class="gallery">
+                <div class="img-box"><h3>Residential Property
+                Elevate your lifestyle with Jayam’s exceptional residential properties.
+                Your ideal home awaits in a vibrant community designed for living well.
+                </h3></div>
+                
+                <div class="img-box"><h3>Residential Land</h3></div>
+                <div class="img-box"><h3>Commercial Properties</h3></div>
+                <div class="img-box"><h3>Commercial Land</h3></div>
+                <div class="img-box"><h3>Farm Land</h3></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please reach out via email or phone.</p>
+        <a href="mailto:info@hpkstar.in"><i class='bx bxl-gmail'></i></a>
+        <i class='bx bxs-phone'></i>
+    </section>
+    <footer>
+        <p>&copy; 2024 Jayam Real Estate Consultancy. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const serviceItems = document.querySelectorAll('.service-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        });
+
+        serviceItems.forEach(item => {
+            observer.observe(item);
+        });
+    });
+</script>
+</body>
+</html>
